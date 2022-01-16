@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import linear_model
 
-df = pd.read_csv("https://content.codecademy.com/programs/data-science-path/linear_regression/honeyproduction.csv")
+df = pd.read_csv("./honeyproduction.csv")
 
-
+# Mean total production of Honey per Year.
+prod_per_year = df.groupby('year').totalprod.mean().reset_index()
